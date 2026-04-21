@@ -1,0 +1,61 @@
+.banner {
+  position: relative;
+  background: var(--charcoal);
+  z-index: 1;
+  margin: -1px 0;
+}
+
+.dripTop {
+  display: block;
+  line-height: 0;
+  margin-bottom: -2px;
+}
+.dripTop svg {
+  width: 100%;
+  height: 56px;
+  display: block;
+}
+
+.track {
+  background: var(--charcoal);
+  padding: 1rem 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.inner {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+.item {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--cream-dark);
+  flex-shrink: 0;
+}
+
+.dot {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.dripBottom {
+  display: block;
+  line-height: 0;
+  margin-top: -2px;
+}
+.dripBottom svg {
+  width: 100%;
+  height: 56px;
+  display: block;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

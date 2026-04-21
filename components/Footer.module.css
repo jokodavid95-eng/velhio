@@ -9,13 +9,14 @@
   gap: 1rem;
 }
 
-
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--cream);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
   white-space: nowrap;
   flex-shrink: 0;
 }

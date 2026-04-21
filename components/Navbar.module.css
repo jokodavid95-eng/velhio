@@ -66,29 +66,36 @@
 .mobileMenu {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: var(--charcoal);
+  background: #1A1A18;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  z-index: 199;
+  z-index: 200;
+  padding: 2rem;
 }
 .mobileLink {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--cream);
   text-decoration: none;
   transition: color 0.2s;
+  letter-spacing: 0.02em;
 }
 .mobileLink:hover { color: var(--yellow); }
 .mobileCta {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  color: var(--yellow);
+  margin-top: 0.5rem;
+  background: var(--yellow);
+  color: #1A1A18;
+  padding: 1rem 2.5rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
   text-decoration: none;
-  margin-top: 1rem;
 }
 
 @media (max-width: 900px) {
