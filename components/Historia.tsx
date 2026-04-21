@@ -10,7 +10,7 @@ export default function Historia() {
       <div className={styles.inner}>
         <div className={`${styles.imgWrap} reveal`}>
           <Image
-            src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&q=85&fit=crop"
+           src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=85&fit=crop"
             alt="Tarta de queso Velhio recién horneada"
             width={800}
             height={1000}
