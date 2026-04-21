@@ -11,7 +11,7 @@ export default function Contacto() {
         {/* Info column */}
         <div className={`${styles.info} reveal`}>
           <h2 className={styles.title}>
-            Ven a<br /><em>vernos</em>
+Ven a <em>vernos</em>
           </h2>
 
           <div className={styles.block}>
