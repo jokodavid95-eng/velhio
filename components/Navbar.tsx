@@ -29,27 +29,10 @@ export default function Navbar() {
         </button>
       </nav>
 
- {menuOpen && (
-  <div className="velhio-menu">
-    ...enlaces...
-  </div>
-)}
-          {[['#historia','Nuestra historia'],['#favoritas','Las preferidas'],['#carta','Carta'],['#contacto','Contacto']].map(([href, label]) => (
-            <a key={href} href={href} onClick={() => setMenuOpen(false)} style={{
-              fontFamily: "'Playfair Display', serif", fontSize: '1.8rem',
-              fontWeight: 600, color: '#F5EFE0', textDecoration: 'none'
-            }}>{label}</a>
-          ))}
-          <a href="https://api.whatsapp.com/send?phone=+34661764709&text=Hola%2C%20quiero%20una%20tarta"
-            target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
-            style={{
-              background: '#D4A843', color: '#1A1A18', padding: '1rem 2.5rem',
-              fontFamily: "'Jost', sans-serif", fontSize: '0.72rem',
-              letterSpacing: '0.2em', textTransform: 'uppercase',
-              fontWeight: 500, textDecoration: 'none'
-            }}>661 764 709</a>
-        </div>
-      )}
-    </>
-  )
-}
+      {menuOpen && (
+        <div className="velhio-menu">
+          <a href="#historia" onClick={() => setMenuOpen(false)}>Nuestra historia</a>
+          <a href="#favoritas" onClick={() => setMenuOpen(false)}>Las preferidas</a>
+          <a href="#carta" onClick={() => setMenuOpen(false)}>Carta</a>
+          <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
+          <a href="https://api.whatsapp.com/send?ph
