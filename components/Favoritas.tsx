@@ -9,7 +9,7 @@ const TARTAS = [
     badge: 'La clásica',
     name: 'Clásica',
     desc: 'La tarta que lo empezó todo. Cremosa, dorada, con base de galleta. Perfecta en cualquier ocasión.',
-    img: https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700&q=85&fit=crop
+    img: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700&q=85&fit=crop',
     prices: { P: '10€', M: '25€', G: '30€' },
     wa: 'cl%C3%A1sica',
   },
@@ -18,7 +18,7 @@ const TARTAS = [
     badge: 'Top ventas',
     name: 'Pistacho',
     desc: 'Pistachos sicilianos tostados sobre nuestra crema base, coronados con pistachos triturados.',
-    img: https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=85&fit=crop
+    img: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=85&fit=crop',
     prices: { P: '10€', M: '30€', G: '40€' },
     wa: 'pistacho',
   },
@@ -27,7 +27,7 @@ const TARTAS = [
     badge: 'Favorita',
     name: 'Lotus',
     desc: 'La irresistible galleta Lotus en crema, fundida en nuestra base. Caramelo y especias en cada capa.',
-    img: https://images.unsplash.com/photo-1551024601-bec78aea704b?w=700&q=85&fit=crop
+    img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=700&q=85&fit=crop',
     prices: { P: '10€', M: '28€', G: '35€' },
     wa: 'Lotus',
   },
