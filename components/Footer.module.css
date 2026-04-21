@@ -10,14 +10,14 @@
 }
 
 .logo {
+.logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--cream);
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  display: block;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .logo span:first-child { color: var(--yellow); }
 .logoSub {
