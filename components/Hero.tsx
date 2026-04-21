@@ -391,7 +391,7 @@ export default function Hero() {
 
       <div className={styles.scrollHint}>
         <div className={styles.scrollLine} />
-        <span>Descubrir</span>
+        
       </div>
     </section>
   )

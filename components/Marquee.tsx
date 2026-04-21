@@ -1,6 +1,7 @@
 const ITEMS = [
   'Tartas artesanales',
   'Hechas a mano',
+  'Una cucharada y no hay vuelta atrás',
   'Receta familiar desde Uruguay',
   'Madrid · Ciempozuelos',
   'Muy muy cremosas',
