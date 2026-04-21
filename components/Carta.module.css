@@ -1,0 +1,78 @@
+.section { background: var(--cream-light); padding: 9rem 4rem; }
+
+.header {
+  max-width: 1200px; margin: 0 auto 3.5rem;
+  display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;
+}
+.headerNote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 0.95rem; color: var(--text-mid);
+}
+
+.grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px; background: var(--cream-dark);
+}
+
+.item {
+  background: var(--cream-light);
+  padding: 1.6rem 2rem;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  position: relative; overflow: hidden;
+  transition: background 0.25s;
+}
+.item::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--yellow);
+  transition: width 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.item:hover { background: #EDE3CE; }
+.item:hover::after { width: 100%; }
+.special { border-bottom: 2px solid var(--yellow); }
+
+.name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--charcoal); margin-bottom: 0.15rem; }
+.note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.88rem; color: var(--text-mid); }
+
+.prices { display: flex; gap: 0.9rem; flex-shrink: 0; }
+.priceCol { text-align: center; }
+.pSize { font-size: 0.58rem; color: var(--yellow); letter-spacing: 0.08em; text-transform: uppercase; }
+.pVal { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--charcoal); }
+
+.porciones {
+  max-width: 1200px; margin: 1.5px auto 0;
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1.5px; background: var(--cream-dark);
+}
+.porcionItem {
+  background: var(--cream-light); padding: 1.4rem 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.porcionName { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 600; color: var(--charcoal); }
+.porcionSub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem; color: var(--text-mid); }
+.porcionPrice { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--yellow); }
+
+.pack {
+  max-width: 1200px; margin: 3rem auto 0;
+  background: var(--yellow); padding: 3rem 3.5rem;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;
+}
+.packText h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--charcoal); }
+.packText p { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--charcoal-mid); margin-top: 0.3rem; }
+.packPrice { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: var(--charcoal); line-height: 1; }
+.packCta {
+  background: var(--charcoal); color: var(--cream);
+  padding: 1rem 2.2rem;
+  font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  text-decoration: none; transition: background 0.25s; display: inline-block;
+}
+.packCta:hover { background: #2C2C28; }
+
+@media (max-width: 900px) {
+  .section { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+  .porciones { grid-template-columns: 1fr; }
+  .pack { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --cream:        #F5EFE0;
+  --cream-light:  #FAF6EE;
+  --cream-dark:   #E2D9C3;
+  --charcoal:     #1A1A18;
+  --charcoal-mid: #252520;
+  --yellow:       #D4A843;
+  --yellow-lt:    #E8C46A;
+  --text:         #1A1A18;
+  --text-mid:     #4A4540;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream-light);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.23,1,0.32,1),
+              transform 0.8s cubic-bezier(0.23,1,0.32,1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+.rd1 { transition-delay: 0.1s; }
+.rd2 { transition-delay: 0.2s; }
+.rd3 { transition-delay: 0.3s; }
+.rd4 { transition-delay: 0.4s; }
+
+/* ── Shared typography ── */
+.section-label {
+  font-size: 0.64rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  line-height: 1.05;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.section-title em { font-style: italic; color: var(--yellow); }
+
+/* ── Buttons ── */
+.btn-gold {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--charcoal);
+  padding: 1rem 2.6rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-gold:hover { background: var(--yellow-lt); transform: translateY(-2px); }
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(245,239,224,0.35);
+  padding: 1rem 2.6rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.25s, color 0.25s;
+}
+.btn-outline:hover { border-color: var(--yellow); color: var(--yellow); }
+
+/* ── Marquee ── */
+.marquee-band {
+  background: var(--charcoal);
+  padding: 0.9rem 0;
+  overflow: hidden;
+  display: flex;
+}
+.marquee-track {
+  display: flex;
+  gap: 2.5rem;
+  white-space: nowrap;
+  animation: marquee 24s linear infinite;
+  will-change: transform;
+}
+.marquee-track span {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--cream-dark);
+}
+.marquee-track .dot { color: var(--yellow); font-style: normal; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50%       { opacity: 0.25; transform: scaleY(0.5); }
+}
+@keyframes floatPin {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}

@@ -1,0 +1,65 @@
+.section {
+  background: var(--cream-light);
+  padding: 7rem 4rem;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  border: 1px solid var(--cream-dark);
+  padding: 2.5rem;
+  transition: border-color 0.3s;
+}
+.card:hover { border-color: var(--yellow); }
+
+.icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.cardTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.6rem;
+}
+
+.cardDesc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.cardPrices {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.6rem;
+}
+
+.cardNote {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+@media (max-width: 900px) {
+  .section { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}
