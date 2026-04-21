@@ -29,14 +29,11 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {menuOpen && (
-        <div style={{
-          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-          background: '#1A1A18', zIndex: 10000,
-          display: 'flex', flexDirection: 'column',
-          alignItems: 'center', justifyContent: 'center',
-          gap: '2rem', padding: '2rem'
-        }}>
+ {menuOpen && (
+  <div className="velhio-menu">
+    ...enlaces...
+  </div>
+)}
           {[['#historia','Nuestra historia'],['#favoritas','Las preferidas'],['#carta','Carta'],['#contacto','Contacto']].map(([href, label]) => (
             <a key={href} href={href} onClick={() => setMenuOpen(false)} style={{
               fontFamily: "'Playfair Display', serif", fontSize: '1.8rem',
