@@ -72,10 +72,8 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  z-index: 9999;
+  z-index: 200;
   padding: 2rem;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
 }
 .mobileLink {
   font-family: 'Playfair Display', serif;
@@ -105,5 +103,5 @@
   .scrolled { padding: 0.9rem 1.5rem; }
   .links { display: none; }
   .phone { display: none; }
-  .burger { display: flex; z-index: 10000; }
+  .burger { display: flex; z-index: 201; }
 }
