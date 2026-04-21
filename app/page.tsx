@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Marquee from '@/components/Marquee'
 import Historia from '@/components/Historia'
 import Favoritas from '@/components/Favoritas'
 import Carta from '@/components/Carta'
@@ -15,7 +14,6 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <Marquee />
       <Historia />
       <Favoritas />
       <Carta />

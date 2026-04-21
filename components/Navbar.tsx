@@ -52,7 +52,7 @@ export default function Navbar() {
       </button>
 
       {menuOpen && (
-       <div className={styles.mobileMenu} style={{background:'#1A1A18', zIndex: 9999}}>
+<div className={styles.mobileMenu} style={{background:'#1A1A18', zIndex: 9999, position:'fixed', top:0, left:0, right:0, bottom:0}}>
           {[
             ['#historia', 'Nuestra historia'],
             ['#favoritas', 'Las preferidas'],

@@ -15,11 +15,13 @@
   font-weight: 700;
   color: var(--cream);
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.1rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
+.logo span:first-child { color: var(--yellow); }
 .logo span:first-child { color: var(--yellow); }
 .logoSub {
   font-family: 'Jost', sans-serif;
