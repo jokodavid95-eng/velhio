@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.logo}>
         Vel<span>h</span>io
-        <span className={styles.logoSub}>Tartas de queso artesanales</span>
+       <span className={styles.logoSub} style={{marginTop:'0.4rem'}}>Tartas de queso artesanales</span>
       </div>
 
       <p className={styles.copy}>
