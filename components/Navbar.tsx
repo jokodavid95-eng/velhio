@@ -21,7 +21,7 @@ export default function Navbar() {
           {[['#historia','Historia'],['#favoritas','Preferidas'],['#carta','Carta'],['#contacto','Contacto']].map(([href,label])=>(
             <li key={href}><a href={href} style={{fontSize:'0.68rem',letterSpacing:'0.15em',textTransform:'uppercase',color:'rgba(245,239,224,0.9)',textDecoration:'none',fontFamily:"'Jost',sans-serif",background:'rgba(20,18,14,0.55)',backdropFilter:'blur(12px)',WebkitBackdropFilter:'blur(12px)',border:'1px solid rgba(212,168,67,0.2)',borderRadius:'2rem',padding:'0.4rem 1rem',display:'block'}}
               onMouseEnter={e=>{e.currentTarget.style.background='rgba(212,168,67,0.2)';e.currentTarget.style.borderColor='rgba(212,168,67,0.6)'}}
-              onMouseLeave={e=>{e.currentTarget.style.background='rgba(255,255,255,0.08)';e.currentTarget.style.borderColor='rgba(212,168,67,0.2)'}}
+             onMouseLeave={e => { e.currentTarget.style.background = 'rgba(20,18,14,0.55)'; e.currentTarget.style.borderColor = 'rgba(212,168,67,0.3)' }}
             >{label}</a></li>
           ))}
         </ul>
