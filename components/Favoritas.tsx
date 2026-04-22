@@ -9,7 +9,7 @@ const TARTAS = [
     badge: 'La clásica',
     name: 'Clásica',
     desc: 'La tarta que lo empezó todo. Cremosa, dorada, con base de galleta. Perfecta en cualquier ocasión.',
-    img: '/clasica.jpg',
+    img: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700&q=85&fit=crop&crop=center',
     prices: { P: '10€', M: '25€', G: '30€' },
     wa: 'cl%C3%A1sica',
   },
@@ -18,7 +18,7 @@ const TARTAS = [
     badge: 'Top ventas',
     name: 'Pistacho',
     desc: 'Pistachos sicilianos tostados sobre nuestra crema base, coronados con pistachos triturados.',
-    img: '/pistacho.jpg',
+    img: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=85&fit=crop&crop=top',
     prices: { P: '10€', M: '30€', G: '40€' },
     wa: 'pistacho',
   },
@@ -27,7 +27,7 @@ const TARTAS = [
     badge: 'Favorita',
     name: 'Lotus',
     desc: 'La irresistible galleta Lotus en crema, fundida en nuestra base. Caramelo y especias en cada capa.',
-   img: '/lotus.jpg',
+    img: 'https://images.unsplash.com/photo-1567327613485-fbc7bf196198?w=700&q=85&fit=crop&crop=center',
     prices: { P: '10€', M: '28€', G: '35€' },
     wa: 'Lotus',
   },
@@ -37,6 +37,9 @@ export default function Favoritas() {
   const ref = useReveal()
   return (
     <section id="favoritas" className={styles.section} ref={ref}>
+      <video className={styles.videoBg} src="/banner.mp4" autoPlay muted loop playsInline />
+      <div className={styles.videoOverlay} />
+      <div className={styles.inner}>
       <div className={`${styles.header} reveal`}>
         <span className="section-label">Las más pedidas</span>
         <h2 className={`section-title ${styles.lightTitle}`}>
@@ -84,6 +87,7 @@ export default function Favoritas() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   )

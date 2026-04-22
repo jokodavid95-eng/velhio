@@ -1,4 +1,29 @@
-.section { background: var(--charcoal); padding: 9rem 4rem; }
+.section {
+  background: var(--charcoal);
+  padding: 9rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.videoBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26,26,24,0.82);
+  pointer-events: none;
+}
+.inner {
+  position: relative;
+  z-index: 2;
+}
 .header { text-align: center; margin-bottom: 5rem; }
 .lightTitle { color: var(--cream) !important; }
 .grid {
