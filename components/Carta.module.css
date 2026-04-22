@@ -31,7 +31,11 @@
 }
 .item:hover { background: #EDE3CE; }
 .item:hover::after { width: 100%; }
-.special { border-bottom: 2px solid var(--yellow); }
+.special { border-bottom: none; }
+
+@media (max-width: 900px) {
+  .special { border-bottom: 2px solid var(--yellow); }
+}
 
 .name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: var(--charcoal); margin-bottom: 0.15rem; }
 .note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.88rem; color: var(--text-mid); }
