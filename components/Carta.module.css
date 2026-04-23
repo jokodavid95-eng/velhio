@@ -29,7 +29,7 @@
   background: var(--egeo);
   transition: width 0.4s cubic-bezier(0.23,1,0.32,1);
 }
-.item:hover { background: #EDE3CE; }
+.item:hover { background: #E8EEF5; }
 .item:hover::after { width: 100%; }
 .special { border-bottom: none; }
 
@@ -37,13 +37,13 @@
   .special { border-bottom: 2px solid var(--yellow); }
 }
 
-.name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #FFFFFF; margin-bottom: 0.15rem; }
+.name { font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 600; color: var(--egeo-dark, #102540); margin-bottom: 0.15rem; }
 .note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.88rem; color: var(--text-mid); }
 
 .prices { display: flex; gap: 0.9rem; flex-shrink: 0; }
 .priceCol { text-align: center; }
-.pSize { font-size: 0.58rem; color: var(--yellow); letter-spacing: 0.08em; text-transform: uppercase; }
-.pVal { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #FFFFFF; }
+.pSize { font-size: 0.58rem; color: var(--egeo); letter-spacing: 0.08em; text-transform: uppercase; }
+.pVal { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600; color: var(--egeo-dark, #102540); }
 
 .porciones {
   max-width: 1200px; margin: 1.5px auto 0;
@@ -54,25 +54,25 @@
   background: var(--cream-light); padding: 1.4rem 2rem;
   display: flex; justify-content: space-between; align-items: center;
 }
-.porcionName { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 600; color: #FFFFFF; }
+.porcionName { font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 600; color: var(--egeo-dark, #102540); }
 .porcionSub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem; color: var(--text-mid); }
-.porcionPrice { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--yellow); }
+.porcionPrice { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 700; color: var(--egeo); }
 
 .pack {
   max-width: 1200px; margin: 3rem auto 0;
   background: var(--egeo); padding: 3rem 3.5rem;
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;
 }
-.packText h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: #FFFFFF; }
-.packText p { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--charcoal-mid); margin-top: 0.3rem; }
-.packPrice { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #FFFFFF; line-height: 1; }
+.packText h3 { font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 700; color: #FFFFFF; }
+.packText p { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: rgba(255,255,255,0.7); margin-top: 0.3rem; }
+.packPrice { font-family: 'Cinzel', serif; font-size: 3.5rem; font-weight: 700; color: #FFFFFF; line-height: 1; }
 .packCta {
-  background: var(--charcoal); color: var(--cream);
+  background: #FFFFFF; color: var(--egeo);
   padding: 1rem 2.2rem;
-  font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
   text-decoration: none; transition: background 0.25s; display: inline-block;
 }
-.packCta:hover { background: #2C2C28; }
+.packCta:hover { background: var(--cream-light); }
 
 @media (max-width: 900px) {
   .section { padding: 5rem 1.5rem; }

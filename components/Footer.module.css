@@ -1,59 +1,71 @@
 .footer {
   background: var(--egeo-dark, #102540);
-  border-top: 1px solid rgba(212,168,67,0.08);
-  padding: 2.5rem 4rem;
+  border-top: 2px solid rgba(200,148,30,0.3);
+  padding: 0;
+}
+
+.footerMeander {
+  width: 100%;
+  height: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='28'%3E%3Cpath d='M0,14 h8 v-8 h8 v16 h8 v-8 h8 v8 h8 v-16 h8 v8 h8 v-8 h8 v8 h8 v-8' stroke='%23C8941E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  animation: meanderScroll 3s linear infinite;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.footerMain {
+  padding: 3rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--cream);
+  color: #F8F6F2;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.8rem;
+  white-space: nowrap;
   flex-shrink: 0;
 }
-.logoName {
-  display: inline;
-  white-space: nowrap;
-}
-.logo span:first-child { color: var(--yellow); }
+
 .logoSub {
-  font-family: 'Jost', sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245,239,224,0.3);
-  font-weight: 300;
+  color: rgba(200,148,30,0.55);
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 .copy {
-  font-size: 0.65rem;
-  color: rgba(245,239,224,0.25);
-  letter-spacing: 0.06em;
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  color: rgba(248,246,242,0.25);
+  letter-spacing: 0.08em;
+  text-align: center;
 }
 
 .social a {
-  font-size: 0.68rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(245,239,224,0.45);
+  color: rgba(248,246,242,0.45);
   text-decoration: none;
   transition: color 0.2s;
 }
-.social a:hover { color: var(--yellow); }
+.social a:hover { color: var(--yellow, #C8941E); }
 
 @media (max-width: 700px) {
-  .footer {
-    padding: 2rem 1.5rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  .footerMain { padding: 2rem 1.5rem; flex-direction: column; align-items: center; text-align: center; }
+  .logo { flex-direction: column; align-items: center; gap: 0.3rem; }
 }

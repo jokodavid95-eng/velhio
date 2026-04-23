@@ -5,7 +5,6 @@
   overflow: hidden;
 }
 
-/* Animated meander */
 .meander {
   width: 100%;
   height: 32px;
@@ -13,31 +12,25 @@
   background-repeat: repeat-x;
   background-position: 0 center;
   animation: meanderScroll 3s linear infinite;
-  background-color: rgba(0,0,0,0.15);
-}
-
-@keyframes meanderScroll {
-  from { background-position: 0 center; }
-  to   { background-position: 80px center; }
+  background-color: rgba(0,0,0,0.2);
 }
 
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 7rem 4rem;
+  padding: 6rem 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 5rem;
   align-items: center;
 }
 
-/* Text */
-.textBlock .section-title { color: var(--cream, #F8F6F2) !important; }
+.textBlock .section-title { color: #F8F6F2 !important; }
 
 .tagline {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--yellow, #C8941E);
   margin: 1.2rem 0 2rem;
   line-height: 1.5;
@@ -55,100 +48,29 @@
 .body strong { color: var(--yellow, #C8941E); font-weight: 600; }
 .body em { font-style: italic; color: #F8F6F2; }
 
-/* Visual side */
 .visual {
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-}
-
-/* Athlete */
-.athleteWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  flex-shrink: 0;
 }
-.athleteSvg {
-  width: 110px;
+
+.vaseScene {
+  width: 100%;
   height: auto;
-  filter: drop-shadow(0 8px 24px rgba(200,148,30,0.2));
-  animation: floatAthlete 5s ease-in-out infinite;
+  border-radius: 6px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
 }
-.athleteLabel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.15rem;
-  text-align: center;
-}
-.athleteLabel span {
-  font-size: 0.56rem;
-  letter-spacing: 0.1em;
+
+.vaseCaption {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(200,148,30,0.65);
-  font-family: 'Jost', sans-serif;
-}
-
-/* Timeline */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.timelineItem {
-  display: grid;
-  grid-template-columns: 80px 20px 1fr;
-  gap: 0 0.8rem;
-  align-items: start;
-  padding-bottom: 2rem;
-  position: relative;
-}
-.timelineItem::after {
-  content: '';
-  position: absolute;
-  left: calc(80px + 0.8rem + 9px);
-  top: 20px;
-  bottom: -2px;
-  width: 1px;
-  background: rgba(200,148,30,0.25);
-}
-.timelineItem:last-child::after { display: none; }
-
-.timelineYear {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--yellow, #C8941E);
-  text-align: right;
-  padding-top: 0.1rem;
-  letter-spacing: 0.05em;
-}
-.timelineDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--yellow, #C8941E);
-  margin-top: 0.2rem;
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(200,148,30,0.5);
-}
-.timelineText {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  color: rgba(248,246,242,0.72);
-  line-height: 1.55;
-}
-
-@keyframes floatAthlete {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
+  color: rgba(200,148,30,0.6);
+  text-align: center;
 }
 
 @media (max-width: 900px) {
   .inner { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
-  .visual { flex-direction: column; align-items: center; }
-  .athleteWrap { display: none; }
-  .timeline { width: 100%; }
 }
