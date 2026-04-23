@@ -8,6 +8,9 @@
   --charcoal-mid: #252520;
   --yellow:       #D4A843;
   --yellow-lt:    #E8C46A;
+  --egeo:         #1B3A5C;
+  --egeo-lt:      #2A5585;
+  --marble:       #F8F5F0;
   --text:         #1A1A18;
   --text-mid:     #4A4540;
 }
@@ -53,6 +56,17 @@ body {
 }
 .section-title em { font-style: italic; color: var(--yellow); }
 
+/* ── Greek meander divider ── */
+.meander-divider {
+  width: 100%;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='24'%3E%3Cpath d='M0,12 h8 v-8 h8 v16 h8 v-8 h8 v8 h8 v-16 h8 v8 h8 v-8 h8 v8 h8 v-8' stroke='%23D4A843' stroke-width='1.5' fill='none' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+  margin: 0;
+  opacity: 0.6;
+}
+
 /* ── Buttons ── */
 .btn-gold {
   display: inline-block;
@@ -92,6 +106,8 @@ body {
   padding: 0.9rem 0;
   overflow: hidden;
   display: flex;
+  border-top: 1px solid rgba(212,168,67,0.15);
+  border-bottom: 1px solid rgba(212,168,67,0.15);
 }
 .marquee-track {
   display: flex;
@@ -116,48 +132,7 @@ body {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
-@keyframes scrollPulse {
-  0%, 100% { opacity: 1; transform: scaleY(1); }
-  50%       { opacity: 0.25; transform: scaleY(0.5); }
-}
 @keyframes floatPin {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
-}
-
-.velhio-menu { position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background: #1A1A18 !important; z-index: 10000 !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 2rem !important; padding: 2rem !important; } .velhio-menu a { font-family: 'Playfair Display', serif !important; font-size: 1.8rem !important; font-weight: 600 !important; color: #F5EFE0 !important; text-decoration: none !important; }
-.velhio-menu {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  background: #1A1A18 !important;
-  z-index: 10000 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 2rem !important;
-  padding: 2rem !important;
-}
-
-.velhio-menu a {
-  font-family: 'Playfair Display', serif !important;
-  font-size: 1.8rem !important;
-  font-weight: 600 !important;
-  color: #F5EFE0 !important;
-  text-decoration: none !important;
-  display: block !important;
-}
-
-.velhio-menu-cta {
-  background: #D4A843 !important;
-  color: #1A1A18 !important;
-  padding: 1rem 2.5rem !important;
-  font-family: 'Jost', sans-serif !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.2em !important;
-  text-transform: uppercase !important;
-  font-weight: 500 !important;
 }
