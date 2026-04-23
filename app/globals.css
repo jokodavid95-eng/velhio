@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
 
 :root {
-  --cream:        #F5EFE0;
-  --cream-light:  #FAF6EE;
-  --cream-dark:   #E2D9C3;
-  --charcoal:     #1A1A18;
-  --charcoal-mid: #252520;
-  --yellow:       #D4A843;
-  --yellow-lt:    #E8C46A;
+  --cream:        #FFFFFF;
+  --cream-light:  #F8F6F2;
+  --cream-dark:   #E8E4DC;
+  --charcoal:     #2C2C3A;
+  --charcoal-mid: #3A3A4A;
+  --yellow:       #C8941E;
+  --yellow-lt:    #DFB040;
   --egeo:         #1B3A5C;
   --egeo-lt:      #2A5585;
-  --marble:       #F8F5F0;
-  --text:         #1A1A18;
-  --text-mid:     #4A4540;
+  --egeo-dark:    #102540;
+  --marble:       #F8F6F2;
+  --text:         #1E1E2A;
+  --text-mid:     #4A4860;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,7 +44,7 @@ body {
   font-size: 0.64rem;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: var(--egeo);
   margin-bottom: 0.9rem;
   display: block;
 }
@@ -52,26 +53,15 @@ body {
   font-size: clamp(2.2rem, 4.5vw, 4rem);
   line-height: 1.05;
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--egeo-dark);
 }
 .section-title em { font-style: italic; color: var(--yellow); }
 
-/* ── Greek meander divider ── */
-.meander-divider {
-  width: 100%;
-  height: 24px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='24'%3E%3Cpath d='M0,12 h8 v-8 h8 v16 h8 v-8 h8 v8 h8 v-16 h8 v8 h8 v-8 h8 v8 h8 v-8' stroke='%23D4A843' stroke-width='1.5' fill='none' opacity='0.4'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: center;
-  margin: 0;
-  opacity: 0.6;
-}
-
-/* ── Buttons ── */
+/* ── Buttons — egeo blue ── */
 .btn-gold {
   display: inline-block;
-  background: var(--yellow);
-  color: var(--charcoal);
+  background: var(--egeo);
+  color: #FFFFFF;
   padding: 1rem 2.6rem;
   font-family: 'Jost', sans-serif;
   font-size: 0.72rem;
@@ -83,46 +73,28 @@ body {
   cursor: pointer;
   transition: background 0.25s, transform 0.2s;
 }
-.btn-gold:hover { background: var(--yellow-lt); transform: translateY(-2px); }
+.btn-gold:hover { background: var(--egeo-lt); transform: translateY(-2px); }
 
 .btn-outline {
   display: inline-block;
   background: transparent;
-  color: var(--cream);
-  border: 1px solid rgba(245,239,224,0.35);
+  color: #FFFFFF;
+  border: 1px solid rgba(255,255,255,0.5);
   padding: 1rem 2.6rem;
   font-family: 'Jost', sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: border-color 0.25s, color 0.25s;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
 }
-.btn-outline:hover { border-color: var(--yellow); color: var(--yellow); }
+.btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.15); color: #fff; }
 
-/* ── Marquee ── */
-.marquee-band {
-  background: var(--charcoal);
-  padding: 0.9rem 0;
-  overflow: hidden;
-  display: flex;
-  border-top: 1px solid rgba(212,168,67,0.15);
-  border-bottom: 1px solid rgba(212,168,67,0.15);
+/* ── Greek meander animated ── */
+@keyframes meanderScroll {
+  from { background-position: 0 center; }
+  to   { background-position: 80px center; }
 }
-.marquee-track {
-  display: flex;
-  gap: 2.5rem;
-  white-space: nowrap;
-  animation: marquee 24s linear infinite;
-  will-change: transform;
-}
-.marquee-track span {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  color: var(--cream-dark);
-}
-.marquee-track .dot { color: var(--yellow); font-style: normal; }
 
 @keyframes marquee {
   from { transform: translateX(0); }

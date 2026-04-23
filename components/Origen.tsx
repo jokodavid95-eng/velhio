@@ -2,10 +2,48 @@
 import { useReveal } from './useReveal'
 import styles from './Origen.module.css'
 
+const AthleteGreek = () => (
+  <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg" className={styles.athleteSvg}>
+    {/* Figure in classic Greek vase painting style — silhouette */}
+    {/* Head */}
+    <circle cx="100" cy="42" r="22" fill="#1B3A5C" opacity="0.85"/>
+    {/* Helmet crest */}
+    <path d="M88,22 Q100,5 112,22 Q108,18 100,20 Q92,18 88,22Z" fill="#C8941E" opacity="0.9"/>
+    <rect x="96" y="18" width="8" height="6" fill="#C8941E" opacity="0.8"/>
+    {/* Body — tunic */}
+    <path d="M80,64 Q100,58 120,64 L128,140 Q100,148 72,140 Z" fill="#1B3A5C" opacity="0.8"/>
+    {/* Belt */}
+    <rect x="76" y="118" width="48" height="6" rx="2" fill="#C8941E" opacity="0.7"/>
+    {/* Left arm extended forward — discus thrower pose */}
+    <path d="M80,75 Q55,68 35,55" stroke="#1B3A5C" strokeWidth="12" strokeLinecap="round" fill="none" opacity="0.85"/>
+    {/* Right arm back */}
+    <path d="M118,80 Q145,72 160,85" stroke="#1B3A5C" strokeWidth="12" strokeLinecap="round" fill="none" opacity="0.85"/>
+    {/* Discus in right hand */}
+    <ellipse cx="162" cy="83" rx="12" ry="7" fill="#C8941E" opacity="0.8" transform="rotate(-20 162 83)"/>
+    {/* Left leg */}
+    <path d="M88,140 Q82,190 78,240 Q76,260 80,270" stroke="#1B3A5C" strokeWidth="13" strokeLinecap="round" fill="none" opacity="0.85"/>
+    {/* Left foot */}
+    <ellipse cx="78" cy="272" rx="14" ry="6" fill="#1B3A5C" opacity="0.8"/>
+    {/* Right leg — stepping forward */}
+    <path d="M112,140 Q118,185 124,230 Q128,255 126,268" stroke="#1B3A5C" strokeWidth="13" strokeLinecap="round" fill="none" opacity="0.85"/>
+    {/* Right foot */}
+    <ellipse cx="125" cy="270" rx="14" ry="6" fill="#1B3A5C" opacity="0.8"/>
+    {/* Ground line */}
+    <line x1="20" y1="278" x2="180" y2="278" stroke="#1B3A5C" strokeWidth="2" opacity="0.3"/>
+    {/* Decorative meander border on vase */}
+    <rect x="10" y="285" width="180" height="1.5" fill="#C8941E" opacity="0.4"/>
+    {/* Stars */}
+    {[[20,100],[175,130],[15,200],[178,220]].map(([x,y],i)=>(
+      <circle key={i} cx={x} cy={y} r="2" fill="#C8941E" opacity="0.35"/>
+    ))}
+  </svg>
+)
+
 export default function Origen() {
   const ref = useReveal()
   return (
     <section id="origen" className={styles.section} ref={ref}>
+      {/* Animated meander top */}
       <div className={styles.meander} />
 
       <div className={styles.inner}>
@@ -18,10 +56,10 @@ export default function Origen() {
             Dos islas, dos culturas, una tradición que viaja siglos.
           </p>
           <p className={styles.body}>
-            En la isla de Samos, frente a las costas de la antigua Jonia, <strong>Hera</strong> — diosa del Olimpo, patrona de la isla — era honrada con ofrendas en el gran templo de 155 columnas que los griegos construyeron en su honor. Entre esas ofrendas, una preparación cremosa de queso fresco, miel y trigo: el primer <em>plakous</em>, la primera tarta de queso de la historia.
+            En la isla de Samos, frente a las costas de la antigua Jonia, <strong>Hera</strong> — diosa del Olimpo, patrona de la isla — era honrada con ofrendas en el gran templo de 155 columnas. Entre esas ofrendas, una preparación cremosa de queso fresco, miel y trigo: el primer <em>plakous</em>, la primera tarta de queso de la historia.
           </p>
           <p className={styles.body}>
-            Siglos después, esa misma receta viajó por el Mediterráneo, cruzó el Atlántico y llegó a Uruguay, donde una familia la heredó, la perfeccionó y la trajo a Madrid.
+            Siglos después, esa receta viajó por el Mediterráneo, cruzó el Atlántico y llegó a Uruguay, donde una familia la heredó, la perfeccionó y la trajo a Madrid.
           </p>
           <p className={styles.body}>
             Hoy, en Ciempozuelos, Velhio la elabora a mano — igual que entonces.
@@ -29,42 +67,12 @@ export default function Origen() {
         </div>
 
         <div className={`${styles.visual} reveal rd2`}>
-          {/* Column of Hera temple */}
-          <div className={styles.columnWrap}>
-            <svg viewBox="0 0 120 420" xmlns="http://www.w3.org/2000/svg" className={styles.columnSvg}>
-              {/* Capital */}
-              <rect x="10" y="20" width="100" height="8" rx="2" fill="#D4A843" opacity="0.8"/>
-              <rect x="20" y="28" width="80" height="6" rx="1" fill="#D4A843" opacity="0.6"/>
-              <ellipse cx="60" cy="38" rx="35" ry="6" fill="#D4A843" opacity="0.5"/>
-              {/* Shaft */}
-              <rect x="42" y="44" width="36" height="280" rx="3" fill="url(#colGrad)" />
-              {/* Flutes */}
-              {[48,54,60,66,72].map(x => (
-                <line key={x} x1={x} y1="44" x2={x} y2="324" stroke="rgba(212,168,67,0.15)" strokeWidth="1"/>
-              ))}
-              {/* Base */}
-              <ellipse cx="60" cy="330" rx="38" ry="7" fill="#D4A843" opacity="0.5"/>
-              <rect x="22" y="337" width="76" height="8" rx="1" fill="#D4A843" opacity="0.6"/>
-              <rect x="14" y="345" width="92" height="10" rx="2" fill="#D4A843" opacity="0.8"/>
-              {/* Ground line */}
-              <line x1="0" y1="360" x2="120" y2="360" stroke="rgba(212,168,67,0.3)" strokeWidth="1"/>
-              {/* Stars/dots around */}
-              {[[15,80],[105,120],[12,200],[108,250],[20,310]].map(([cx,cy],i) => (
-                <circle key={i} cx={cx} cy={cy} r="2" fill="#D4A843" opacity="0.4"/>
-              ))}
-              <defs>
-                <linearGradient id="colGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#D4A843" stopOpacity="0.15"/>
-                  <stop offset="40%" stopColor="#F5EFE0" stopOpacity="0.9"/>
-                  <stop offset="60%" stopColor="#FAF6EE" stopOpacity="1"/>
-                  <stop offset="100%" stopColor="#D4A843" stopOpacity="0.2"/>
-                </linearGradient>
-              </defs>
-            </svg>
-
-            <div className={styles.columnLabel}>
-              <span>Hereo de Samos</span>
-              <span>Siglo VI a.C. · UNESCO</span>
+          {/* Greek athlete figure */}
+          <div className={styles.athleteWrap}>
+            <AthleteGreek />
+            <div className={styles.athleteLabel}>
+              <span>Discóbolo · Antigua Grecia</span>
+              <span>Estilo ánfora ática · V a.C.</span>
             </div>
           </div>
 
@@ -86,6 +94,7 @@ export default function Origen() {
         </div>
       </div>
 
+      {/* Animated meander bottom */}
       <div className={styles.meander} />
     </section>
   )

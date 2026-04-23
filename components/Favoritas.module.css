@@ -1,5 +1,5 @@
 .section {
-  background: var(--charcoal);
+  background: var(--egeo);
   padding: 9rem 4rem;
   position: relative;
   overflow: hidden;
@@ -29,10 +29,10 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
+  gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(212,168,67,0.08);
+  background: transparent;
 }
 .card {
   background: rgba(20,18,14,0.55);

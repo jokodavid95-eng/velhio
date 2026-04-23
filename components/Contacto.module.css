@@ -1,5 +1,5 @@
 .section {
-  background: var(--charcoal);
+  background: var(--egeo-dark, #102540);
   padding: 9rem 4rem;
 }
 
@@ -17,10 +17,10 @@
 
 .title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 4vw, 3.8rem);
+  font-size: clamp(2rem, 4vw, 3.8rem);
   font-weight: 700;
   color: var(--cream);
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 3rem;
   white-space: nowrap;
 }

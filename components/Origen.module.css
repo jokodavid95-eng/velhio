@@ -5,14 +5,20 @@
   overflow: hidden;
 }
 
+/* Animated meander */
 .meander {
   width: 100%;
-  height: 28px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='28'%3E%3Cpath d='M0,14 h8 v-8 h8 v16 h8 v-8 h8 v8 h8 v-16 h8 v8 h8 v-8 h8 v8 h8 v-8' stroke='%23D4A843' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='32'%3E%3Cpath d='M0,16 h8 v-8 h8 v16 h8 v-8 h8 v8 h8 v-16 h8 v8 h8 v-8 h8 v8 h8 v-8' stroke='%23C8941E' stroke-width='2' fill='none'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
-  background-position: center;
-  opacity: 0.5;
-  background-color: rgba(0,0,0,0.2);
+  background-position: 0 center;
+  animation: meanderScroll 3s linear infinite;
+  background-color: rgba(0,0,0,0.15);
+}
+
+@keyframes meanderScroll {
+  from { background-position: 0 center; }
+  to   { background-position: 80px center; }
 }
 
 .inner {
@@ -25,17 +31,17 @@
   align-items: center;
 }
 
-/* ── Text block ── */
-.textBlock .section-title { color: var(--cream, #F5EFE0); }
+/* Text */
+.textBlock .section-title { color: var(--cream, #F8F6F2) !important; }
 
 .tagline {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.3rem;
-  color: var(--yellow, #D4A843);
+  color: var(--yellow, #C8941E);
   margin: 1.2rem 0 2rem;
   line-height: 1.5;
-  border-left: 3px solid var(--yellow, #D4A843);
+  border-left: 3px solid var(--yellow, #C8941E);
   padding-left: 1rem;
 }
 
@@ -43,45 +49,45 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
   line-height: 1.85;
-  color: rgba(245,239,224,0.75);
+  color: rgba(248,246,242,0.78);
   margin-bottom: 1.2rem;
 }
-.body strong { color: var(--yellow, #D4A843); font-weight: 600; }
-.body em { font-style: italic; color: var(--cream, #F5EFE0); }
+.body strong { color: var(--yellow, #C8941E); font-weight: 600; }
+.body em { font-style: italic; color: #F8F6F2; }
 
-/* ── Visual ── */
+/* Visual side */
 .visual {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: flex-start;
 }
 
-/* Column */
-.columnWrap {
+/* Athlete */
+.athleteWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   flex-shrink: 0;
 }
-.columnSvg {
-  width: 80px;
+.athleteSvg {
+  width: 110px;
   height: auto;
-  filter: drop-shadow(0 8px 30px rgba(212,168,67,0.2));
-  animation: floatCol 6s ease-in-out infinite;
+  filter: drop-shadow(0 8px 24px rgba(200,148,30,0.2));
+  animation: floatAthlete 5s ease-in-out infinite;
 }
-.columnLabel {
+.athleteLabel {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.15rem;
   text-align: center;
 }
-.columnLabel span {
-  font-size: 0.58rem;
+.athleteLabel span {
+  font-size: 0.56rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(212,168,67,0.6);
+  color: rgba(200,148,30,0.65);
   font-family: 'Jost', sans-serif;
 }
 
@@ -89,7 +95,6 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 0;
   flex: 1;
 }
 .timelineItem {
@@ -107,7 +112,7 @@
   top: 20px;
   bottom: -2px;
   width: 1px;
-  background: rgba(212,168,67,0.25);
+  background: rgba(200,148,30,0.25);
 }
 .timelineItem:last-child::after { display: none; }
 
@@ -115,7 +120,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--yellow, #D4A843);
+  color: var(--yellow, #C8941E);
   text-align: right;
   padding-top: 0.1rem;
   letter-spacing: 0.05em;
@@ -124,25 +129,26 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--yellow, #D4A843);
+  background: var(--yellow, #C8941E);
   margin-top: 0.2rem;
   flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(212,168,67,0.5);
+  box-shadow: 0 0 8px rgba(200,148,30,0.5);
 }
 .timelineText {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
-  color: rgba(245,239,224,0.7);
+  color: rgba(248,246,242,0.72);
   line-height: 1.55;
 }
 
-@keyframes floatCol {
+@keyframes floatAthlete {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-8px); }
+  50%       { transform: translateY(-10px); }
 }
 
 @media (max-width: 900px) {
   .inner { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
   .visual { flex-direction: column; align-items: center; }
+  .athleteWrap { display: none; }
   .timeline { width: 100%; }
 }
