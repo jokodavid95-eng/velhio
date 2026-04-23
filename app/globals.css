@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 :root {
   --cream:        #FFFFFF;
@@ -21,7 +21,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--cream-light);
   color: var(--text);
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', serif;
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -31,8 +31,8 @@ body {
 .rd1{transition-delay:.1s} .rd2{transition-delay:.2s} .rd3{transition-delay:.3s} .rd4{transition-delay:.4s}
 
 .section-label {
-  font-family: 'Cinzel', serif;
-  font-size: 0.62rem;
+  font-family: 'Philosopher', serif;
+  font-size: 0.68rem;
   letter-spacing: 0.38em;
   text-transform: uppercase;
   color: var(--egeo);
@@ -53,11 +53,11 @@ body {
   background: var(--egeo);
   color: #FFFFFF;
   padding: 1rem 2.6rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
+  font-family: 'Philosopher', serif;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -71,8 +71,8 @@ body {
   color: #FFFFFF;
   border: 1px solid rgba(255,255,255,0.5);
   padding: 1rem 2.6rem;
-  font-family: 'Cinzel', serif;
-  font-size: 0.68rem;
+  font-family: 'Philosopher', serif;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;

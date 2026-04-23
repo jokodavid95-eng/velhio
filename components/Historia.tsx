@@ -10,7 +10,7 @@ export default function Historia() {
       <div className={styles.inner}>
         <div className={`${styles.imgWrap} reveal`}>
           <Image
-            src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=800&q=85&fit=crop"
+            src="/historia2.jpg"
             alt="Tarta de queso Velhio recién horneada"
             width={800}
             height={1000}
@@ -30,7 +30,7 @@ export default function Historia() {
           <p className={styles.body}>
             Una receta que nació en la antigua Grecia, sobrevivió siglos cruzando el Mediterráneo y el Atlántico, y llegó a nuestras manos en Uruguay. Hoy la elaboramos a mano en Ciempozuelos, con la misma paciencia y los mismos ingredientes de siempre.
           </p>
-          <a
+          
             href="https://api.whatsapp.com/send?phone=+34661764709&text=Hola%2C%20quiero%20una%20tarta"
             className="btn-gold"
             target="_blank"
