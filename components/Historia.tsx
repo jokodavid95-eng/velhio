@@ -21,7 +21,6 @@ export default function Historia() {
             Desde<br />Uruguay<br />con ♥
           </div>
         </div>
-
         <div className={`${styles.text} reveal rd2`}>
           <span className="section-label">Nuestra historia</span>
           <h2 className="section-title">
@@ -30,12 +29,7 @@ export default function Historia() {
           <p className={styles.body}>
             Una receta que nació en la antigua Grecia, sobrevivió siglos cruzando el Mediterráneo y el Atlántico, y llegó a nuestras manos en Uruguay. Hoy la elaboramos a mano en Ciempozuelos, con la misma paciencia y los mismos ingredientes de siempre.
           </p>
-          
-            href="https://api.whatsapp.com/send?phone=+34661764709&text=Hola%2C%20quiero%20una%20tarta"
-            className="btn-gold"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://api.whatsapp.com/send?phone=+34661764709&text=Hola%2C%20quiero%20una%20tarta" className="btn-gold" target="_blank" rel="noopener noreferrer">
             Pedir ahora por WhatsApp
           </a>
           <div className={styles.stats}>
